@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+:root{
+    --main-txt-color: #fffffa;
+    --main-alt-txt-color: #000103;
+    --main-bg-color: #515052;
+    --main-alt-bg-color: #ff312e;
+    --main-footer-bg-color: #333138;
+    --main-links-color: #4361EE;
+}
+
+/* REMOVING ALL PADDING AND MARGIN */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* SETTING THE STANDARD VALUES */
+html{
+    font-size: 10px;
+    box-sizing: border-box;
+    color: var(--main-txt-color);
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+}
+
+/* BODY */
+#css-zen-garden{
+    max-width: 100vw;
+    height: auto;
+    background-color: var(--main-bg-color);
+}
+
+/* MAIN CONTAINER */
+.page-wrapper{
+    font-size: 3rem;
+    width: 100vw;
+    height: auto;
+}
+
+/* GENERAL LINKS 
+    CONTAINS
+        PSEUDO CLASS SELECTOR*/
+a{
+    text-decoration: none;
+    color: var(--main-links-color);
+}
+
+a:visited{
+    color: #A67DB8;
+}
+
+a:hover{
+    color: #6DB1BF;
+}
+
+.page-wrapper > .intro > header{
+    background-image: url('assets/pexels-james-wheeler-1519088.webp');
+    filter: grayscale(100%);
+    height: 100vh;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.page-wrapper > .intro > header > h1,
+.page-wrapper > .intro > header > h2{
+    font-size: 10rem;
+}
+
+/*Attribute Selector*/
+abbr[title]{
+    color: var(--main-alt-bg-color);
+}
+
+.page-wrapper > .intro > header > h1,
+.page-wrapper > .intro > header > h2{
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+/* DIVIDER ONE */
+.intro > .summary{
+    background-color: var(--main-txt-color);
+    color: var(--main-alt-txt-color);
+    padding: 1.5em 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.intro > .summary > p{
+    padding: 1.5em 0;
+}
+
+/* MAIN LAYOUT */
+.page-wrapper > .intro h3,
+.page-wrapper > .main-supporting h3{
+    background-color: var(--main-alt-bg-color);
+}
+
+/* PSEUDO ELEMENT SELECTOR & GENERAL SIBLING COMBINATOR*/
+.page-wrapper p:has(~ p)::first-letter{
+    background-color: #4CC9F0;
+    padding-left: 1em;
+}
+/* ADJACENT SIBLING COMBINATOR*/
+.page-wrapper p + p::first-letter{
+    background-color: #4CC9F0;
+    padding-left: 1em;
+}
+
+/* MAIN SECTION ONE 
+   INCLUDES: 
+            ID SELECTOR
+            CHILD COMBINATOR
+            */
+.intro > .preamble{
+    display: flex;
+    padding: 5em;
+}
+
+.intro > .preamble > h3{
+    padding-top: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-radius: 2em;
+    text-align: center;
+    margin-right: 1.5em;
+}
+
+.intro > .preamble > #para-cluster{
+    font-size: 2rem;
+    flex-direction: rows;
+}
+
+.intro > .preamble > #para-cluster > p{
+    margin: 1.5em;
+}
+
+/* MAIN SECTION TWO */
+.main-supporting > .explanation{
+    display: flex;
+    padding: 5em;
+    flex-direction: row-reverse;
+}
+
+.main-supporting > .explanation > h3{
+    padding-top: 3.5em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    border-radius: 2em;
+    text-align: center;
+    margin-right: 1.5em;
+}
+
+.main-supporting > .explanation > #para-cluster{
+    font-size: 2rem;
+    flex-direction: rows;
+}
+
+.main-supporting > .explanation > #para-cluster > p{
+    margin: 1.5em;
+}
+
+/* MAIN SECTION THREE */
+.main-supporting > .participation{
+    display: flex;
+    padding: 5em;
+}
+
+.main-supporting > .participation > h3{
+    padding-top: 7em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 2em;
+    text-align: center;
+    margin-right: 1.5em;
+}
+
+.main-supporting > .participation > #para-cluster{
+    font-size: 2rem;
+    flex-direction: rows;
+}
+
+.main-supporting > .participation > #para-cluster > p{
+    margin: 1.5em;
+}
+
+/* MAIN SECTION FOUR */
+.main-supporting > .benefits{
+    display: flex;
+    padding: 5em;
+    flex-direction: row-reverse;
+}
+
+.main-supporting > .benefits > h3{
+    padding-top: 4em;
+    padding-left: 3.25em;
+    padding-right: 3.25em;
+    padding-bottom: 4em;
+    border-radius: 2em;
+    text-align: center;
+    margin-right: 1.5em;
+}
+
+.main-supporting > .benefits > #para-cluster{
+    font-size: 2rem;
+    padding-top: 2em;
+    flex-direction: rows;
+}
+
+.main-supporting > .benefits > #para-cluster > p{
+    margin: 1.5em;
+}
+
+/*                  MAIN SECTION FIVE 
+    I wanted to have the text scroll with the user until
+    it reaches the bottom of the red zone, however I believe
+    I need to use JS for this
+*/
+
+.main-supporting > .requirements{
+    display: flex;
+    padding: 5em;
+}
+
+.main-supporting > .requirements > h3{
+    padding-top: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-radius: 2em;
+    text-align: center;
+    margin-right: 1.5em;
+}
+
+.main-supporting > .requirements > #para-cluster{
+    font-size: 2rem;
+    flex-direction: rows;
+}
+
+.main-supporting > .requirements > #para-cluster > p{
+    margin: 1.5em;
+}
+
+/* DIVIDER TWO */
+.main-supporting > #page-spacer{
+    background-color: var(--main-txt-color);
+    color: var(--main-alt-txt-color);
+    padding: 1.5em 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.main-supporting > #page-spacer > a{
+    padding: 1.5em;
+}
+
+/* FOOTER 
+    CONTAINS: 
+        DESCENDANT COMBINATOR
+*/
+
+.footer{
+    font-size: 1.5rem;
+    background-color: var(--main-footer-bg-color);
+    padding: 2em;
+}
+
+.footer > .wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .wrapper ul{
+    list-style-type: none;
+}
